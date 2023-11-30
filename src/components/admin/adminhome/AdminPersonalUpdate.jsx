@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { MdOutlineDeleteForever } from "react-icons/md";
 import axios from 'axios';
 import { API_URL } from '../../../Config';
+import Navbar from '../../navbar/Navbar';
+import Footer from '../../footer/Footer';
+import FooterBottom from '../../footer/FooterBottom';
 function AdminPersonalUpdate() {
     const [formData, setFormData] = useState({
         name: '',
@@ -242,7 +245,7 @@ function AdminPersonalUpdate() {
     };
     return (
         <>
-
+<Navbar/>
             <div className="flex justify-center flex-auto p-4">
                 <form className='mt-1'>
                     <div className="grid gap-3 mt-8 mb-6 md:grid-cols-2">
@@ -729,6 +732,8 @@ function AdminPersonalUpdate() {
                         onClick={handleSubmit}>Update</button>
                 </form>
             </div >
+            <Footer/>
+            <FooterBottom />
         </>
     );
 }

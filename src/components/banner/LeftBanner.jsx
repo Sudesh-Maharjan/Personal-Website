@@ -57,7 +57,7 @@ const LeftBanner = () => {
             {d.personalIntroduction}
           </p>
           <ScrollLink to="aboutmebanner" className="blueButton" >
-            ABOUT ME
+            Contact Me
           </ScrollLink>
           <Accordion />
         </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { pf1, pf2, pf3 } from "../../assets/index";
 import { Link } from 'react-router-dom';
 import BannerTitle from '../layouts/BannerTitle';
+import Navbar from '../navbar/Navbar';
 
 
 const Portfolio = () => {

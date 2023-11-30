@@ -8,6 +8,7 @@ import MyJourney from './MyJourney';
 import Travels from './Travels';
 import Seminars from './Seminars';
 import Trainnings from './Trainnings';
+import BannerTitle from '../layouts/BannerTitle';
 
 const sections = [
   { id: 'myJourney', label: 'My Journey', component: <MyJourney />, show: true },
@@ -29,7 +30,7 @@ const Resume = ({ data }) => {
   return (
     <section id="resume" className="w-full py-20 border-b-[1px] border-b-black">
       <div className="flex items-center justify-center text-center">
-        <Title title="YEARS OF EXPERIENCE" des="My Resume" />
+        <BannerTitle title="My Resume" des="My Resume" />
       </div>
       <div className='flex items-center justify-center'>
         <ul className="grid w-full grid-cols-2 gap-3 md:grid-cols-2 xl:grid-cols-4">

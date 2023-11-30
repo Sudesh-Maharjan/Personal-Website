@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import BannerTitle from '../layouts/BannerTitle'
 import './MyJourney.css'
 import { Link } from 'react-router-dom';
+import { API_URL } from '../../Config';
 const MyJourney = () => {
 
     const [year, setYear] = useState([]);
@@ -12,7 +13,7 @@ const MyJourney = () => {
    useEffect(() => {
      const fetchapi = async () => {
        try {
-        const response = await fetch('http://192.168.10.98:5000/api/memory');
+        const response = await fetch(`${API_URL}/memory`);
          const result = await response.json();
          setYear(result);
  
@@ -73,7 +74,7 @@ const MyJourney = () => {
             {
             yearData?.randomImage && (
 
-              <div className="bg-black relative rounded-md">
+              <div className="bg-black relative rounded-md hover:translate-x-1">
                <div className=" flex justify-center items-end rounded-md">
                 <div className=" opacity-60  rounded-md">
                   <Link to={`/MyJourneyDetails/${yearData._id}`}>

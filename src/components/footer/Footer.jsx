@@ -21,19 +21,21 @@ const Footer = () => {
     fetchData();
   }, []);
   return (
-    <div className="grid w-full h-auto grid-cols-1 gap-8 py-10 bg-black md:grid-cols-2 lgl:grid-cols-3">
+    
+    <div className="grid grid-cols-1 gap-8 py-8 bg-black md:grid-cols-2 lgl:grid-cols-3">
+      
       <div className="flex flex-col justify-center w-full h-full">
-        <div className="flex gap-4 ml-6">
+        <div className="flex gap-4 justify-center">
           <Media />
         </div>
       </div>
       <div className="flex items-center justify-center"> {/* Center the logo */}
         <img className="w-32" src={logo} alt="logo" />
       </div>
+      <div className="">
       {
         data && data.map((d) => (
-
-          <div className="flex items-end justify-end gap-4 mr-6 " key={d.id}>
+          <div className="flex justify-center" key={d.id}>
             <Link to={`mailto:${d.email}`}>
               <a className="bannerIcon">
                 <AiTwotoneMail />
@@ -43,7 +45,9 @@ const Footer = () => {
           </div>
         ))
       }
+      </div>
     </div>
+
   );
 };
 
